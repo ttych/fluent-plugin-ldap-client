@@ -1,0 +1,37 @@
+---
+
+plugins:
+  - rubocop-rake
+
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: enable
+
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/BlockLength:
+  Exclude:
+    - fluent-plugin-ldap-client.gemspec
+    - test/**/*.rb
+
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*.rb
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/ParameterLists:
+  Exclude:
+    - test/helper.rb
+
+Naming/MethodParameterName:
+  Exclude:
+    - lib/fluent/plugin/filter_ldap_enrich.rb
+
+Style/Documentation:
+  Enabled: false

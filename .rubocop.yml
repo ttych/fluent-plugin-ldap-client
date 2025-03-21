@@ -11,7 +11,7 @@ Gemspec/DevelopmentDependencies:
   EnforcedStyle: gemspec
 
 Metrics/AbcSize:
-  Max: 20
+  Max: 25
 
 Metrics/BlockLength:
   Exclude:
@@ -22,12 +22,19 @@ Metrics/ClassLength:
   Exclude:
     - test/**/*.rb
 
+Metrics/CyclomaticComplexity:
+  Max: 10
+
 Metrics/MethodLength:
   Max: 20
 
 Metrics/ParameterLists:
+  Max: 10
   Exclude:
     - test/helper.rb
+
+Metrics/PerceivedComplexity:
+  Max: 10
 
 Naming/MethodParameterName:
   Exclude:

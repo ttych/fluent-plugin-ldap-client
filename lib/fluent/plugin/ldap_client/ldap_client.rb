@@ -54,7 +54,7 @@ module Fluent
           return unless encryption
 
           { method: :simple_tls,
-            tls_options: { ca_file: ca_file } }
+            tls_options: { ca_file: ca_cert } }
         end
 
         def search_query(query)
@@ -69,7 +69,7 @@ module Fluent
 
         def search_filter(filter)
           result = ldap.search(base: base_dn, filter: filter)
-          log&.debug "LDAP Client: No LDAP results for query \"#{query}\"" if result.nil? || result.empty?
+          log&.debug "LDAP Client: No LDAP results for filter \"#{filter}\"" if result.nil? || result.empty?
 
           result&.first&.to_h
         rescue StandardError => e

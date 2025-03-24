@@ -49,8 +49,8 @@ module Fluent
       desc 'ldap password'
       config_param :ldap_password, :string, default: DEFAULT_LDAP_PASSWORD, secret: true
 
-      desc 'CA cert'
-      config_param :ca_cert, :string, default: nil
+      desc 'ldap CA cert'
+      config_param :ldap_ca_cert, :string, default: nil
 
       DEFAULT_LDAP_ATTRIBUTES = {}.freeze
 
@@ -92,7 +92,7 @@ module Fluent
           username: ldap_username,
           password: ldap_password,
           encryption: ldap_encryption,
-          ca_cert: ca_cert,
+          ca_cert: ldap_ca_cert,
           log: log
         )
 

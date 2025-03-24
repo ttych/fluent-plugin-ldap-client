@@ -26,7 +26,7 @@ class LdapEnrichFilterTest < Test::Unit::TestCase
       assert_equal Fluent::Plugin::LdapEnrichFilter::DEFAULT_LDAP_BASE_DN, input.ldap_base_dn
       assert_equal Fluent::Plugin::LdapEnrichFilter::DEFAULT_LDAP_USERNAME, input.ldap_username
       assert_equal Fluent::Plugin::LdapEnrichFilter::DEFAULT_LDAP_PASSWORD, input.ldap_password
-      assert_equal nil, input.ca_cert
+      assert_equal nil, input.ldap_ca_cert
       assert_equal Fluent::Plugin::LdapEnrichFilter::DEFAULT_CACHE_ENABLE, input.cache_enable
       assert_equal Fluent::Plugin::LdapEnrichFilter::DEFAULT_CACHE_SIZE, input.cache_size
       assert_equal Fluent::Plugin::LdapEnrichFilter::DEFAULT_CACHE_TTL_POSITIVE, input.cache_ttl_positive

@@ -20,7 +20,7 @@ Parameters are :
 | ldap_base_dn       | ''        | string   | ldap base DN for query                                            |
 | ldap_username      | nil       | string   | username for ldap bind                                            |
 | ldap_password      | nil       | string   | password for ldap bind                                            |
-| ca_cert            | nil       | string   | path of CA cert                                                   |
+| ldap_ca_cert       | nil       | string   | path of CA cert for ldap connection                               |
 | ldap_query         | nil       | string   | query that will be interpolated against record, then sent to ldap |
 | ldap_attributes    | {}        | hash     | mapping of ldap attributes to inject in record                    |
 | enable_cache       | true      | bool     | enable cache to reduce query to ldap                              |

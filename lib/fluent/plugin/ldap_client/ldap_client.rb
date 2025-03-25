@@ -63,7 +63,7 @@ module Fluent
           filter = Net::LDAP::Filter.construct(query)
           search_filter(filter)
         rescue StandardError => e
-          log&.warn "LDAP Client error: query failed: #{e.message}"
+          log&.warn "LDAP Client error: query \"#{query}\" failed: #{e.message}"
           nil
         end
 
